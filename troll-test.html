@@ -116,19 +116,17 @@
 			Text();
 		};
 		
-		
-		// function changeimg(imgsrc){
-				// img.src = "img/"+imgsrc;
-				// cur=imgsrc;
-				// }
+		var img = new Image();
+		function changeimg(imgsrc){
+				img.src = "img/"+imgsrc;
+				cur=imgsrc;
+				}
 		function Img(imgsrc) {
 			cur=imgsrc;
 			var canvas = document.getElementById("myCanvas");
 			var context = canvas.getContext("2d");
-			var img = new Image();
-			img.src = "img/"+imgsrc;
+			img.src = "img/"+imgsrc+"?"+new Date().getTime();
 			img.onload = function () {
-				alert('onload');
 				context.drawImage(img, 0, 0, boundWidth, boundHeight);
 				context.font = "bold 44px 'Microsoft JhengHei'";
 				context.textAlign = "center";
@@ -153,7 +151,6 @@
 			$("#leftCol1").change(function () {
 				leftCol1 = new Array();
 				leftCol1 = $(this).prop("value").split('');
-				alert('change');
 				root.Img(cur);
 			});
 			$("#leftCol2").change(function () {
