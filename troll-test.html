@@ -116,15 +116,16 @@
 			Text();
 		};
 		
-		var img = new Image();
-		function changeimg(imgsrc){
-				img.src = "img/"+imgsrc;
-				cur=imgsrc;
-				}
+		
+		// function changeimg(imgsrc){
+				// img.src = "img/"+imgsrc;
+				// cur=imgsrc;
+				// }
 		function Img(imgsrc) {
 			cur=imgsrc;
 			var canvas = document.getElementById("myCanvas");
 			var context = canvas.getContext("2d");
+			var img = new Image();
 			img.src = "img/"+imgsrc;
 			img.onload = function () {
 				alert('onload');
