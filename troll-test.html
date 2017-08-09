@@ -127,6 +127,7 @@
 			var context = canvas.getContext("2d");
 			img.src = "img/"+imgsrc;
 			img.onload = function () {
+				alert('onload!');
 				context.drawImage(img, 0, 0, boundWidth, boundHeight);
 				context.font = "bold 44px 'Microsoft JhengHei'";
 				context.textAlign = "center";
