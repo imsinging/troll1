@@ -13,13 +13,15 @@
 		<style>
 			div.container {
 				text-align: center;
-				 max-width:800px;
+				 max-width:1024px;
 			}
 			body{padding:20px; background:url('img/bg_w.jpg');}
 			.row{margin-bottom:15px;}
 			input{margin-bottom:10px;}
 			h2 {text-decoration: underline; margin:20px;}
 			.imgturn{width: 100%; max-width: 600px;}
+			.thumbnail{width:100px; margin:20px auto;}
+			.sidebar{padding:20px; background:#ffffe9;}
 		</style>
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -33,7 +35,7 @@
 	  (adsbygoogle = window.adsbygoogle || []).push({
 		google_ad_client: "ca-pub-9570440324333151",
 		enable_page_level_ads: true
-	  });
+	  });   
 	</script>
 	</head>
 	<body>
@@ -44,45 +46,47 @@
 		<div class="container">
 			<h1>很嚴格之圖片產生器</h1>
 			<br><p></p>
-			<p>之後會陸續出其它對話圖，樣式就freeStyle各位大大見諒。</p>
-			<h2>阿嶽覺得不行</h2>
+			<p>以後有新的作品會在粉絲頁發布，樣式就freeStyle各位大大見諒。</p>
+			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">  鄉民作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>              100張裡挑50張分類還蠻累的...</p>
+			<p>0808：1.修改為多圖共用一框。2.增加阿翰圖 3.舊版連結：<a onClick="ga('send', 'event', { 'eventCategory': '舊版連結', 'eventAction': '點擊舊版連結', 'eventLabel':'點擊舊版' });" href="https://imsinging.github.io/troll/troll-v1" target="_blank">https://imsinging.github.io/troll/troll-v1</a></p>
+			<p style="color:red;">目前新版測試：手機在換圖時才會更新輸入文字(Iphone)，桌機正常。若有其他問題請回報粉專，或使用舊版。</p>
+			<hr>
 			<div class="row">
-				<input type="text" id="ayubottom1" placeholder="我覺得不行">
-				<input type="text" id="ayubottom2" placeholder="我覺得很普通">
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<img id="saveas2" class="imgturn" />
-					<canvas id="canvas2" style="display:none;"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<a href="#" class="btn btn-primary" onClick="this.href=document.getElementById('saveas2').src;ga('send', 'event', { 'eventCategory': '下載圖片', 'eventAction': '點下載圖片', 'eventLabel':'點FB連結' });" download="ayucant.png">下載圖片(手機長按圖片另存新檔)</a>
-				<a href="https://m.facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
-			</div>
-			<h2>阿嶽真的很嚴格</h2>
-			<div class="row">
-				<div class="col-sm-4">
-					<input type="text"  id="leftCol1" placeholder="阿嶽">
-				</div>
-				<div class="col-sm-4">
-					<input type="text" id="leftCol2" placeholder="真的">
-				</div>
-				<div class="col-sm-4">
-					<input type="text"  id="rightCol" placeholder="很嚴格">
-				</div>
-		
 			<div class="col-sm-12">
-				<input type="text" id="bottomRow" placeholder="比我想像中的嚴格!">
+				<input type="text" id="topRow" placeholder="陳~志~豪~">
+			</div>
+			<div class="col-sm-4">
+				<input type="text"  id="leftCol1" placeholder="上次說要請我喝">
+			</div>
+			<div class="col-sm-4">
+				<input type="text" id="leftCol2" placeholder="查 湯 會">
+			</div>
+			<div class="col-sm-4">
+				<input type="text"  id="rightCol" placeholder="結果自己忘記">
+			</div>
+			<div class="col-sm-12">
+				<input type="text" id="bottomRow" placeholder="白目 真的很靠北耶">
 			</div>
 			</div>
-			
 			<div class="row">
-				<div class="col-sm-12">
+			
+				<div class="col-sm-9">
 					<img id="saveas" class="imgturn" />
 					<canvas id="myCanvas" style="display: none;"></canvas>
 				</div>
+				<div class="col-sm-3"><div class="sidebar">
+			<h2>點換圖</h2>
+			<a onClick="changeimg('ayucant.jpg');">
+			<image src="img/ayucant.jpg" class="thumbnail">我覺得不行，我覺得很普通!</a><br>
+			<a onClick="changeimg('hotdog.jpg');">
+			<image src="img/hotdog.jpg" class="thumbnail"></img>阿嶽真的很嚴格，比想像中還要嚴格</a><br>
+			<a onClick="changeimg('ahan.jpg');">
+			<image src="img/ahan.jpg" class="thumbnail"></img>
+			上次說要請我喝茶湯會自己都忘記，白目，真的很靠北耶</a><br>
+			</div>
+			</div>
 			</div>		
+
 			<div class="row">
 				<a href="#" class="btn btn-primary" onClick="this.href=document.getElementById('saveas').src;ga('send', 'event', { 'eventCategory': '下載圖片', 'eventAction': '點下載圖片', 'eventLabel':'點FB連結' });" download="hotdog.png">下載圖片(手機長按圖片另存新檔)</a>
 				<a href="https://m.facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
@@ -90,95 +94,86 @@
 			<br>			
 			<h2>梗源↓↓</h2>
 			<br>
-			<div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/LvfgLbZaz3A?ecver=2" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+			<div style="position:relative;height:0;padding-bottom:75.0%" class=""><iframe src="https://www.youtube.com/embed/LvfgLbZaz3A?ecver=2" width="100%" height="auto" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+			<div class="" style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/SwJ4PuHURaA?ecver=2" width="100%" height="auto" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 			<br>
+										<p>預計新增：1.文字拖曳功能。2.不同圖片顯示不同範例文字。工具師說累了想睡了明天再說。</p>
 		</div>
-
-		
 		<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 		<script>
-		var leftCol1 = ["阿", "獄"];
-		var leftCol2 = ["真", "的"];
-		var rightCol = ["很", "嚴", "格"];
-		var bottomRow = "比我想像中的嚴格!";
-		var ayubottom1 = "我覺得不行";
-		var ayubottom2 = "我覺得很普通";
+		var leftCol1 = ["上","次","說","要","請","我","喝"];
+		var leftCol2 = ["查", "湯","會"];
+		var rightCol = ["結","果","自","己","忘","記"];
+		var bottomRow = "白目 真的很靠北耶";
+		var topRow = "陳~志~豪~";
 		var boundWidth = 600;
 		var boundHeight = 600;
 		$("#myCanvas").prop("width", boundWidth);
 		$("#myCanvas").prop("height", boundHeight);		
 		$("#canvas2").prop("width", boundWidth);
-		$("#canvas2").prop("height", boundHeight);
 		window.onload = function() {
 			Img();
 			Text();
 		};
-			function Img() {
-				var canvas = document.getElementById("myCanvas");
-				var canvas2 = document.getElementById("canvas2");//第二次
-				var context = canvas.getContext("2d");
-				var context2 = canvas2.getContext("2d");
-				var img = new Image();
-				img.src = "img/hotdog.jpg";
-				img.onload = function () {
-					context.drawImage(img, 0, 0, boundWidth, boundHeight);
-					context.font = "bold 44px 'Microsoft JhengHei'";
-					context.fillText(bottomRow, 80, 500);
-					context.font = "40px 微軟正黑體";
-					context.fillStyle = "#000000"
-					for (var i = 0; i < leftCol1.length; i++) {
-						context.fillText(leftCol1[i], 60, 100 + i * 44);
-					}
-					for (var i = 0; i < leftCol2.length; i++) {
-						context.fillText(leftCol2[i], 120 , 140 + i * 44);
-					}
-					for (var i = 0; i < rightCol.length; i++) {
-						context.fillText(rightCol[i], 440, 90 + i * 50);
-					}		
-					$("#saveas").prop("src", canvas.toDataURL());
+		
+		var img = new Image();
+		function changeimg(imgsrc){
+				img.src = "img/"+imgsrc;
 				}
-				var img2 = new Image();
-				img2.src = "img/ayucant.jpg";
-				img2.onload = function () {
-					context2.drawImage(img2, 0, 0, boundWidth, boundHeight);
-					context2.font = "bold 44px 'Microsoft JhengHei'";
-					context2.textAlign="center";
-					context2.fillText(ayubottom1, 300, 60);
-					context2.fillText(ayubottom2, 300, 560);
-					$("#saveas2").prop("src", canvas2.toDataURL());
+		function Img() {
+		
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			img.src = "img/ahan.jpg";
+			img.onload = function () {
+				context.drawImage(img, 0, 0, boundWidth, boundHeight);
+				context.font = "bold 44px 'Microsoft JhengHei'";
+				context.textAlign = "center";
+				context.fillText(bottomRow, 300, 560);
+				context.fillText(topRow, 300, 60);
+				context.font = "40px 微軟正黑體";
+				context.fillStyle = "#000000"
+				for (var i = 0; i < leftCol1.length; i++) {
+					context.fillText(leftCol1[i], 60, 120 + i * 44);
 				}
+				for (var i = 0; i < leftCol2.length; i++) {
+					context.fillText(leftCol2[i], 120 , 140 + i * 44);
+				}
+				for (var i = 0; i < rightCol.length; i++) {
+					context.fillText(rightCol[i], 530, 120 + i * 50);
+				}		
+				$("#saveas").prop("src", canvas.toDataURL());
 			}
-			function Text() {
-				var root = this;
-				$("#leftCol1").change(function () {
-					leftCol1 = new Array();
-					leftCol1 = $(this).prop("value").split('');
-					root.Img();
-				});
-				$("#leftCol2").change(function () {
-					leftCol2 = new Array();
-					leftCol2 = $(this).prop("value").split('');
-					root.Img();
-				});
-				$("#bottomRow").change(function () {
-					bottomRow = $(this).prop("value");
-					root.Img();
-				});
-				$("#rightCol").change(function () {
-					rightCol = new Array();
-					rightCol = $(this).prop("value").split('');
-					root.Img();
-				});
-				
-				$("#ayubottom1").change(function () {
-					ayubottom1 = $(this).prop("value");
-					root.Img();
-				});
-				$("#ayubottom2").change(function () {
-					ayubottom2 = $(this).prop("value");
-					root.Img();
-				});
-			}
+		}
+		function Text() {
+			var root = this;
+			$("#leftCol1").change(function () {
+				leftCol1 = new Array();
+				leftCol1 = $(this).prop("value").split('');
+				root.Img();
+			});
+			$("#leftCol2").change(function () {
+				leftCol2 = new Array();
+				leftCol2 = $(this).prop("value").split('');
+				root.Img();
+			});
+			$("#bottomRow").change(function () {
+				bottomRow = $(this).prop("value");
+				root.Img();
+			});
+			$("#rightCol").change(function () {
+				rightCol = new Array();
+				rightCol = $(this).prop("value").split('');
+				root.Img();
+			});
+			$("#topRow").change(function () {
+				topRow = $(this).prop("value");
+				root.Img();
+			});
+		}
+			
+			 
+			
 		</script>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- 廣告 -->
