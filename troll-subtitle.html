@@ -8,7 +8,7 @@
 		<meta property="og:title" content="阿嶽真的很嚴格之產圖器"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content=""/>
-		<meta property="og:description" content="阿嶽真的很嚴格之產圖器。之後會陸續出中國有嘻哈或者其它對話圖，樣式就freeStyle各位大大見諒。"/>
+		<meta property="og:description" content="惡搞字幕產生器。柯南黑衣人、掐掐"/>
 		<meta property="og:image" content="https://imsinging.github.io/troll/img/ayucant.png"/>
 		<style>
 			div.container {
@@ -55,6 +55,9 @@
 				<input type="text" id="topRow" placeholder="請善用空格置左置右或隱藏欄位">
 			</div>
 			<div class="col-sm-12">
+				<input type="text" id="sbottomRow" placeholder="備用字幕區">
+			</div>
+			<div class="col-sm-12">
 				<input type="text" id="bottomRow" placeholder="字幕區">
 			</div>
 			</div>
@@ -83,6 +86,12 @@
 			<a onClick="changeimg('black6.jpg');">
 			<image src="img/black6.jpg" class="thumbnail"></img>
 			</a>
+						<a onClick="changeimg('minsi2.jpg');">
+			<image src="img/minsi2.jpg" class="thumbnail"></img>
+			</a>
+									<a onClick="changeimg('minsi1.jpg');">
+			<image src="img/minsi1.jpg" class="thumbnail"></img>
+			</a>
 			</div>
 			</div>
 			</div>		
@@ -96,6 +105,7 @@
 		<script src="asset/jquery-1.8.3.min.js"></script>
 		<script>
 		var bottomRow = "約嗎約嗎約嗎 約嗎約嗎";
+		var sbottomRow = "";
 		var topRow = "             都不～糾～";
 		var boundWidth = 600;
 		var boundHeight = 320;
@@ -124,6 +134,7 @@
 				context.textAlign = "center";
 				context.fillStyle = "#ffffff"
 				context.fillText(bottomRow, 300, 300);
+				context.fillText(sbottomRow, 300, 260);
 				context.fillText(topRow, 300, 60);
 				
 				$("#saveas").prop("src", canvas.toDataURL());
@@ -135,6 +146,10 @@
 			var root = this;
 			$("#bottomRow").change(function () {
 				bottomRow = $(this).prop("value");
+				root.Img(cur);
+			});
+			$("#sbottomRow").change(function () {
+				sbottomRow = $(this).prop("value");
 				root.Img(cur);
 			});
 			$("#topRow").change(function () {
@@ -178,5 +193,14 @@
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 廣告 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:200px"
+     data-ad-client="ca-pub-9570440324333151"
+     data-ad-slot="4193290224"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 	</body>
 </html>
