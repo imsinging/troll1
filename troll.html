@@ -9,7 +9,7 @@
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content=""/>
 		<meta property="og:description" content="阿嶽真的很嚴格之產圖器。之後會陸續出中國有嘻哈或者其它對話圖，樣式就freeStyle各位大大見諒。"/>
-		<meta property="og:image" content="https://imsinging.github.io/troll/img/ayucant.png"/>
+		<meta property="og:image" content="https://imsinging.github.io/troll/img/fin-ayu.png"/>
 		<style>
 			div.container {
 				text-align: center;
@@ -22,6 +22,9 @@
 			.imgturn{width: 100%; max-width: 600px;}
 			.thumbnail{width:100px; margin:20px auto;}
 			.sidebar{padding:20px; background:#ffffe9;}
+			.thumbnail{width:100px;}
+			.sidebar a{ width:100px;margin:10px; display:inline-block; vertical-align:top;}
+			.fin{width:200px;margin:10px; display:inline-block;}
 			#videos iframe{width:400px; height:300px;}
 		</style>
 		<!-- Google Tag Manager -->
@@ -49,8 +52,8 @@
 			<br><p></p>
 			<p>以後有新的作品會在粉絲頁發布，樣式就freeStyle各位大大見諒。</p>
 			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">  鄉民作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>              100張裡挑50張分類還蠻累的...</p>
-			<p>0808：1.修改為多圖共用一框。2.增加阿翰圖 3.舊版連結：<a onClick="ga('send', 'event', { 'eventCategory': '舊版連結', 'eventAction': '點擊舊版連結', 'eventLabel':'點擊舊版' });" href="https://imsinging.github.io/troll/troll-v1" target="_blank">https://imsinging.github.io/troll/troll-v1</a></p>
-			<p style="color:red;">還是把bug修完了，可喜可賀~最近粉絲頁多了好多粉絲阿!邊緣人小魯覺得溫馨。0810 00：40</p>
+			<p>0810：1.增加字幕產生器。2.增加"鎖鏈康尼"以及"先發給他好不好" 3.舊版連結：<a onClick="ga('send', 'event', { 'eventCategory': '舊版連結', 'eventAction': '點擊舊版連結', 'eventLabel':'點擊舊版' });" href="https://imsinging.github.io/troll/troll-v1" target="_blank">https://imsinging.github.io/troll/troll-v1</a></p>
+			<!--p style="color:red;">增加了鎖鏈康尼以及先發給他好不好 0811 02：50</p-->
 			<hr>
 			<div class="row">
 			<div class="col-sm-12">
@@ -74,24 +77,41 @@
 				<div class="col-sm-9">
 					<img id="saveas" class="imgturn" />
 					<canvas id="myCanvas" style="display: none;"></canvas>
+			
+					<div class="col-sm-12" style="margin:10px;">
+					
+				<a href="#" class="btn btn-primary" onClick="this.href=document.getElementById('saveas').src;ga('send', 'event', { 'eventCategory': '下載圖片', 'eventAction': '點下載圖片', 'eventLabel':'點FB連結' });" download="middle2faith.png">下載圖片(手機長按圖片另存新檔)</a>
+				<a href="https://facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
+				</div>
+				<hr>
+			     <h2>
+				 現成圖片
+			     </h2>
+					<image src="img/fin-ayu.png" title="我覺得不行" alt="我覺得不行，阿嶽張震嶽" class="fin"></img>
+					<image src="img/fin-ahan.png" title="阿翰po影片" alt="陳志豪說要請我喝查湯會都忘記白目真的很靠北，阿翰po影片" class="fin"></img>
+					<image src="img/fin-dog.png" title="阿嶽真的很嚴格" alt="阿嶽真的很嚴格，比想像的嚴格，MChotdog" class="fin"></img>
 				</div>
 				<div class="col-sm-3"><div class="sidebar">
 			<h2>點換圖</h2>
+			<a onClick="changeimg('ayu2.jpg');">
+			<image src="img/ayu2.jpg" class="thumbnail"></img>
+			先發給他好不好</a>
+			<a onClick="changeimg('canni.jpg');">
+			<image src="img/canni.jpg" class="thumbnail"></img>
+			鎖鏈康尼</a>
 			<a onClick="changeimg('ayucant.jpg');">
-			<image src="img/ayucant.jpg" class="thumbnail">我覺得不行，我覺得很普通!</a><br>
+			<image src="img/ayucant.jpg" class="thumbnail">我覺得不行，我覺得很普通!</a>
 			<a onClick="changeimg('hotdog.jpg');">
-			<image src="img/hotdog.jpg" class="thumbnail"></img>阿嶽真的很嚴格，比想像中還要嚴格</a><br>
+			<image src="img/hotdog.jpg" class="thumbnail"></img>阿嶽真的很嚴格，比想像中還要嚴格</a>
 			<a onClick="changeimg('ahan.jpg');">
 			<image src="img/ahan.jpg" class="thumbnail"></img>
-			上次說要請我喝茶湯會自己都忘記，白目，真的很靠北耶</a><br>
+			上次說要請我喝茶湯會自己都忘記，白目，真的很靠北耶</a>
+			
 			</div>
 			</div>
 			</div>		
 
-			<div class="row">
-				<a href="#" class="btn btn-primary" onClick="this.href=document.getElementById('saveas').src;ga('send', 'event', { 'eventCategory': '下載圖片', 'eventAction': '點下載圖片', 'eventLabel':'點FB連結' });" download="middle2faith.png">下載圖片(手機長按圖片另存新檔)</a>
-				<a href="https://facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
-			</div>
+			
 			<br>			
 			<h2>梗源↓↓</h2>
 			<br>
