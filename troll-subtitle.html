@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 	<head>
 		<meta charset="utf-8">
@@ -20,7 +20,7 @@
 			input{margin-bottom:10px;}
 			h2 {text-decoration: underline; margin:20px;}
 			.imgturn{width: 100%; max-width: 600px;}
-			.thumbnail{width:100px; margin:20px auto;}
+			.thumbnail{width:100px; margin:10px; display:inline-block;}
 			.sidebar{padding:20px; background:#ffffe9;}
 			#videos iframe{width:400px; height:300px;}
 		</style>
@@ -45,45 +45,44 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 		<div class="container">
-			<h1>很嚴格之圖片產生器 <a href="https://imsinging.github.io/troll/troll-subtitle" class="btn btn-info">各種字幕產生器</a></h1>
+			<h1>很嚴格之字幕產生器 <a href="https://imsinging.github.io/troll/troll" class="btn btn-info">阿嶽圖產生器</a></h1>
 			<br><p></p>
 			<p>以後有新的作品會在粉絲頁發布，樣式就freeStyle各位大大見諒。</p>
-			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">  鄉民作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>              100張裡挑50張分類還蠻累的...</p>
-			<p>0808：1.修改為多圖共用一框。2.增加阿翰圖 3.舊版連結：<a onClick="ga('send', 'event', { 'eventCategory': '舊版連結', 'eventAction': '點擊舊版連結', 'eventLabel':'點擊舊版' });" href="https://imsinging.github.io/troll/troll-v1" target="_blank">https://imsinging.github.io/troll/troll-v1</a></p>
-			<p style="color:red;">還是把bug修完了，可喜可賀~最近粉絲頁多了好多粉絲阿!邊緣人小魯覺得溫馨。0810 00：40</p>
+			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>  歡迎上粉絲頁投稿</p>
 			<hr>
 			<div class="row">
 			<div class="col-sm-12">
-				<input type="text" id="topRow" placeholder="陳~志~豪~">
-			</div>
-			<div class="col-sm-4">
-				<input type="text"  id="leftCol1" placeholder="上次說要請我喝">
-			</div>
-			<div class="col-sm-4">
-				<input type="text" id="leftCol2" placeholder="查 湯 會">
-			</div>
-			<div class="col-sm-4">
-				<input type="text"  id="rightCol" placeholder="結果自己忘記">
+				<input type="text" id="topRow" placeholder="請善用空格置左置右或隱藏欄位">
 			</div>
 			<div class="col-sm-12">
-				<input type="text" id="bottomRow" placeholder="白目 真的很靠北耶">
+				<input type="text" id="bottomRow" placeholder="字幕區">
 			</div>
 			</div>
 			<div class="row">
-			
-				<div class="col-sm-9">
-					<img id="saveas" class="imgturn" />
-					<canvas id="myCanvas" style="display: none;"></canvas>
-				</div>
-				<div class="col-sm-3"><div class="sidebar">
+			<div class="col-sm-12">
+				<img id="saveas" class="imgturn" />
+				<canvas id="myCanvas" style="display: none;"></canvas>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-sm-12"><div class="sidebar">
 			<h2>點換圖</h2>
-			<a onClick="changeimg('ayucant.jpg');">
-			<image src="img/ayucant.jpg" class="thumbnail">我覺得不行，我覺得很普通!</a><br>
-			<a onClick="changeimg('hotdog.jpg');">
-			<image src="img/hotdog.jpg" class="thumbnail"></img>阿嶽真的很嚴格，比想像中還要嚴格</a><br>
-			<a onClick="changeimg('ahan.jpg');">
-			<image src="img/ahan.jpg" class="thumbnail"></img>
-			上次說要請我喝茶湯會自己都忘記，白目，真的很靠北耶</a><br>
+			<a onClick="changeimg('black1.jpg');">
+			<image src="img/black1.jpg" class="thumbnail"></img>
+			</a>
+			<a onClick="changeimg('black2.jpg');">
+			<image src="img/black2.jpg" class="thumbnail"></a>
+			<a onClick="changeimg('black3.jpg');">
+			<image src="img/black3.jpg" class="thumbnail"></img></a>
+			<a onClick="changeimg('black4.jpg');">
+			<image src="img/black4.jpg" class="thumbnail"></img>
+			</a>
+			<a onClick="changeimg('black5.jpg');">
+			<image src="img/black5.jpg" class="thumbnail"></img>
+			</a>
+			<a onClick="changeimg('black6.jpg');">
+			<image src="img/black6.jpg" class="thumbnail"></img>
+			</a>
 			</div>
 			</div>
 			</div>		
@@ -93,28 +92,19 @@
 				<a href="https://facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
 			</div>
 			<br>			
-			<h2>梗源↓↓</h2>
-			<br>
-			<div id="videos"></div>
-			<br>
-			<p>預計新增：1.文字拖曳功能。2.不同圖片顯示不同範例文字。工具師說累了想睡了明天再說。</p>
 		</div>
 		<script src="asset/jquery-1.8.3.min.js"></script>
 		<script>
-		var leftCol1 = ["上","次","說","要","請","我","喝"];
-		var leftCol2 = ["查", "湯","會"];
-		var rightCol = ["結","果","自","己","忘","記"];
-		var bottomRow = "白目 真的很靠北耶";
-		var topRow = "陳~志~豪~";
+		var bottomRow = "約嗎約嗎約嗎 約嗎約嗎";
+		var topRow = "             都不～糾～";
 		var boundWidth = 600;
-		var boundHeight = 600;
+		var boundHeight = 320;
 		var vloaded=0;
 		var sloaded=0;
 		$("#myCanvas").prop("width", boundWidth);
 		$("#myCanvas").prop("height", boundHeight);		
-		$("#canvas2").prop("width", boundWidth);
 		window.onload = function() {
-			Img('ahan.jpg');
+			Img('black1.jpg');
 			Text();
 		};
 		
@@ -130,45 +120,21 @@
 			img.src = "img/"+imgsrc+"?"+new Date().getTime();
 			img.onload = function () {
 				context.drawImage(img, 0, 0, boundWidth, boundHeight);
-				context.font = "bold 44px 'Microsoft JhengHei'";
+				context.font = "bold 36px 'Microsoft JhengHei'";
 				context.textAlign = "center";
-				context.fillText(bottomRow, 300, 560);
+				context.fillStyle = "#ffffff"
+				context.fillText(bottomRow, 300, 300);
 				context.fillText(topRow, 300, 60);
-				context.font = "40px 微軟正黑體";
-				context.fillStyle = "#000000"
-				for (var i = 0; i < leftCol1.length; i++) {
-					context.fillText(leftCol1[i], 60, 120 + i * 44);
-				}
-				for (var i = 0; i < leftCol2.length; i++) {
-					context.fillText(leftCol2[i], 120 , 140 + i * 44);
-				}
-				for (var i = 0; i < rightCol.length; i++) {
-					context.fillText(rightCol[i], 530, 120 + i * 50);
-				}		
+				
 				$("#saveas").prop("src", canvas.toDataURL());
 				if (sloaded != 1){loadscript();}
-				if (vloaded != 1){loadvideos();}
+				//if (vloaded != 1){loadvideos();}
 			}
 		}
 		function Text() {
 			var root = this;
-			$("#leftCol1").change(function () {
-				leftCol1 = new Array();
-				leftCol1 = $(this).prop("value").split('');
-				root.Img(cur);
-			});
-			$("#leftCol2").change(function () {
-				leftCol2 = new Array();
-				leftCol2 = $(this).prop("value").split('');
-				root.Img(cur);
-			});
 			$("#bottomRow").change(function () {
 				bottomRow = $(this).prop("value");
-				root.Img(cur);
-			});
-			$("#rightCol").change(function () {
-				rightCol = new Array();
-				rightCol = $(this).prop("value").split('');
 				root.Img(cur);
 			});
 			$("#topRow").change(function () {
@@ -186,16 +152,16 @@
 		document.body.appendChild(script);
 		return sloaded=1;
 		} 
-		function loadvideos() {
-        var iframe1 = document.createElement('iframe');
-        var iframe2 = document.createElement('iframe');
-        var videos = document.getElementById('videos');
-		iframe1.src = 'https://www.youtube.com/embed/SwJ4PuHURaA?ecver=2';
-		iframe2.src = 'https://www.youtube.com/embed/LvfgLbZaz3A?ecver=2';
-        videos.appendChild(iframe1);
-        videos.appendChild(iframe2);
-		return vloaded=1;
-		}			
+		// function loadvideos() {
+        // var iframe1 = document.createElement('iframe');
+        // var iframe2 = document.createElement('iframe');
+        // var videos = document.getElementById('videos');
+		// iframe1.src = 'https://www.youtube.com/embed/SwJ4PuHURaA?ecver=2';
+		// iframe2.src = 'https://www.youtube.com/embed/LvfgLbZaz3A?ecver=2';
+        // videos.appendChild(iframe1);
+        // videos.appendChild(iframe2);
+		// return vloaded=1;
+		// }			
 		</script>
 		<!-- 廣告 -->
 		<ins class="adsbygoogle"
@@ -209,18 +175,6 @@
 		data-ad-client="ca-pub-9570440324333151"
 		data-ad-slot="3239841206"
 		data-ad-format="auto"></ins>
-		<ins class="adsbygoogle"
-		 style="display:block"
-		 data-ad-format="fluid"
-		 data-ad-layout="image-side"
-		 data-ad-layout-key="-fe+5w+3r-dk+bo"
-		 data-ad-client="ca-pub-9570440324333151"
-		 data-ad-slot="4507505043"></ins>
-		 <!--300*600 -->
-		<ins class="adsbygoogle"
-		 style="display:inline-block;width:300px;height:600px"
-		 data-ad-client="ca-pub-9570440324333151"
-		 data-ad-slot="4216995508"></ins>
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
