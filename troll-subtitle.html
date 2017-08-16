@@ -2,13 +2,13 @@
 <html lang="zh-TW">
 	<head>
 		<meta charset="utf-8">
-		<title>阿嶽真的很嚴格之產圖器</title>
+		<title>很嚴格之字幕產生器</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="asset/bootstrap.min.css" rel="stylesheet">
 		<meta property="og:title" content="阿嶽真的很嚴格之產圖器"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content=""/>
-		<meta property="og:description" content="惡搞字幕產生器。柯南黑衣人、掐掐"/>
+		<meta property="og:description" content="惡搞字幕產生器。柯南黑衣人、掐掐、鸚鵡兄弟"/>
 		<meta property="og:image" content="https://imsinging.github.io/troll/img/ayucant.png"/>
 		<style>
 			div.container {
@@ -47,7 +47,7 @@
 		<div class="container">
 			<h1>很嚴格之字幕產生器 <a href="https://imsinging.github.io/troll/troll" class="btn btn-info">阿嶽圖產生器</a></h1>
 			<br><p></p>
-			<p>以後有新的作品會在粉絲頁發布，樣式就freeStyle各位大大見諒。</p>
+			<p>以後有新的作品會在粉絲頁發布，開發新功能中~。</p>
 			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>  歡迎上粉絲頁投稿</p>
 			<hr>
 			<div class="row">
@@ -68,30 +68,9 @@
 			</div>
 			</div>
 			<div class="row">
-			<div class="col-sm-12"><div class="sidebar">
+			<div class="col-sm-12 sidebar">
 			<h2>點換圖</h2>
-			<a onClick="changeimg('black1.jpg');">
-			<image src="img/black1.jpg" class="thumbnail"></img>
-			</a>
-			<a onClick="changeimg('black2.jpg');">
-			<image src="img/black2.jpg" class="thumbnail"></a>
-			<a onClick="changeimg('black3.jpg');">
-			<image src="img/black3.jpg" class="thumbnail"></img></a>
-			<a onClick="changeimg('black4.jpg');">
-			<image src="img/black4.jpg" class="thumbnail"></img>
-			</a>
-			<a onClick="changeimg('black5.jpg');">
-			<image src="img/black5.jpg" class="thumbnail"></img>
-			</a>
-			<a onClick="changeimg('black6.jpg');">
-			<image src="img/black6.jpg" class="thumbnail"></img>
-			</a>
-						<a onClick="changeimg('minsi2.jpg');">
-			<image src="img/minsi2.jpg" class="thumbnail"></img>
-			</a>
-									<a onClick="changeimg('minsi1.jpg');">
-			<image src="img/minsi1.jpg" class="thumbnail"></img>
-			</a>
+			<div class="" id="imgmenu">
 			</div>
 			</div>
 			</div>		
@@ -100,21 +79,38 @@
 				<a href="#" class="btn btn-primary" onClick="this.href=document.getElementById('saveas').src;ga('send', 'event', { 'eventCategory': '下載圖片', 'eventAction': '點下載圖片', 'eventLabel':'點FB連結' });" download="middle2faith.png">下載圖片(手機長按圖片另存新檔)</a>
 				<a href="https://facebook.com/childish.fake/" class="btn btn-link" onClick="ga('send', 'event', { 'eventCategory': 'FB連結', 'eventAction': '點FB連結', 'eventLabel':'點FB連結' });">FB:我是中二我很廢</a>
 			</div>
-			<br>			
+			<br>	
+			<p style="background:#fdff95;">如果喜歡這個網頁的話，歡迎加粉絲頁、或點廣告贊助喔!有你們的鼓勵我才會更新喔</p>
 		</div>
 		<script src="asset/jquery-1.8.3.min.js"></script>
 		<script>
-		var bottomRow = "約嗎約嗎約嗎 約嗎約嗎";
+		//--批次增圖
+		var imgmenu = document.getElementById('imgmenu');
+		var imgarray=['black1.jpg','black2.jpg','black3.jpg','black4.jpg','black5.jpg','black6.jpg','minsi1.jpg','minsi2.jpg'];
+		//docomo add
+		for(i=1;i<=11;i++){
+			var imgname = 'docomo'+i+'.jpg';
+			imgarray.push(imgname);
+		}
+		for(i=0;i<imgarray.length;i++){
+			var a = document.createElement('a');
+			var aattr = 'changeimg(\''+ imgarray[i]+'\');';
+			a.setAttribute("onClick", aattr);
+			a.innerHTML = '<image src="img/'+ imgarray[i] +'\" class=\"thumbnail\"></img>';
+			imgmenu.appendChild(a);
+		}
+		//--canvas
+		var bottomRow = "關愛智障的眼神";
 		var sbottomRow = "";
-		var topRow = "             都不～糾～";
+		var topRow = "";
 		var boundWidth = 600;
-		var boundHeight = 320;
+		var boundHeight = 400;
 		var vloaded=0;
 		var sloaded=0;
 		$("#myCanvas").prop("width", boundWidth);
 		$("#myCanvas").prop("height", boundHeight);		
 		window.onload = function() {
-			Img('black1.jpg');
+			Img('docomo5.jpg');
 			Text();
 		};
 		
@@ -133,9 +129,9 @@
 				context.font = "bold 36px 'Microsoft JhengHei'";
 				context.textAlign = "center";
 				context.fillStyle = "#ffffff"
-				context.fillText(bottomRow, 300, 300);
-				context.fillText(sbottomRow, 300, 260);
-				context.fillText(topRow, 300, 60);
+				context.fillText(bottomRow, boundWidth/2, boundHeight-20);
+				context.fillText(sbottomRow, boundWidth/2, boundHeight-65);
+				context.fillText(topRow, boundWidth/2, 60);
 				
 				$("#saveas").prop("src", canvas.toDataURL());
 				if (sloaded != 1){loadscript();}
