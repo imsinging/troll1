@@ -51,7 +51,7 @@
 			<h1>很嚴格之圖片產生器 <a href="https://imsinging.github.io/troll/troll-subtitle" class="btn btn-info">各種字幕產生器</a></h1>
 			<br><p></p>
 			<p>以後有新的作品會在粉絲頁發布，樣式就freeStyle各位大大見諒。</p>
-			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">  鄉民作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>              100張裡挑50張分類還蠻累的...</p>
+			<p><a onClick="ga('send', 'event', { 'eventCategory': 'blog連結', 'eventAction': '點擊blog連結', 'eventLabel':'點擊blog' });" href="https://iamiwasi.blogspot.tw/2017/08/ayutroll.html">  鄉民作品賞析：https://iamiwasi.blogspot.tw/2017/08/ayutroll.html</a>        投稿啦!</p>
 			<p>0816：1.在字幕產生器增加最近很紅的雞 2.舊版連結：<a onClick="ga('send', 'event', { 'eventCategory': '舊版連結', 'eventAction': '點擊舊版連結', 'eventLabel':'點擊舊版' });" href="https://imsinging.github.io/troll/troll-v1" target="_blank">https://imsinging.github.io/troll/troll-v1</a></p>
 			<!--p style="color:red;">增加了鎖鏈康尼以及先發給他好不好 0811 02：50</p-->
 			<hr>
@@ -85,6 +85,8 @@
 			<div class="col-sm-6">
 			<div class="sidebar">
 			<h2>點換圖</h2>
+			<a onClick="changeimg('tsai815.jpg');">
+			<image src="img/tsai815.jpg" class="thumbnail">一定是大家愛不夠才會停電</a>
 			<a onClick="changeimg('ifan.jpg');">
 			<image src="img/ifan.jpg" class="thumbnail"></img>
 			你有freestyle嗎?</a>
@@ -135,11 +137,11 @@ data-ad-slot="4193290224"></ins>
 
 		<script src="asset/jquery-1.8.3.min.js"></script>
 		<script>
-		var leftCol1 = ["","基","本","概","念","是"];
-		var leftCol2 = ["","白","人","壓","1","3"];
-		var rightCol = ["","黑","人","壓","2","4"];
-		var bottomRow = "你還有FreeStyle嗎?";
-		var topRow = "你有FreeStyle嗎?";
+		var leftCol1 = ["","你","說","的","電"];
+		var leftCol2 = [""];
+		var rightCol = ["","是","要","來","了","沒"];
+		var bottomRow = "不是黑";
+		var topRow = "眼前的黑";
 		var boundWidth = 600;
 		var boundHeight = 600;
 		var vloaded=0;
@@ -148,7 +150,7 @@ data-ad-slot="4193290224"></ins>
 		$("#myCanvas").prop("height", boundHeight);		
 		$("#canvas2").prop("width", boundWidth);
 		window.onload = function() {
-			Img('ifan.jpg');
+			Img('ayucant.jpg');
 			Text();
 		};
 		
